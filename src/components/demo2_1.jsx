@@ -40,7 +40,7 @@ const Demo1 = () => {
     //设置背景雾化
     scene.fog = new THREE.Fog(0x1A1A1A, 1, 1000);
 
-    //初始化相机
+    //初始化相机 透视相机
     camera = new THREE.PerspectiveCamera(40, sizes.width / sizes.height);
     scene.add(camera);
     camera.position.set(20, 100, 450);
@@ -54,30 +54,30 @@ const Demo1 = () => {
     const sphereMaterial = new THREE.MeshLambertMaterial({
       color: 0x03c03c,
       wireframe: true
-    });
-    const sphereGeometry = new THREE.SphereGeometry(80, 32, 32);
+    }); // 材质
+    const sphereGeometry = new THREE.SphereGeometry(80, 32, 32); // 形状
     const planet = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(planet);
     //创建轨道环
-    const torusGeometry = new THREE.TorusGeometry(150, 8, 2, 120);
+    const torusGeometry = new THREE.TorusGeometry(150, 8, 2, 120); //形状
     const torudMaterial = new THREE.MeshLambertMaterial({
       color: 0x40a9ff,
       wireframe: true
-    });
+    }); //材质
     const ring = new THREE.Mesh(torusGeometry, torudMaterial);
-    ring.rotation.x = Math.PI / 2;
-    ring.rotation.y = -0.1 * (Math.PI / 2);
+    ring.rotation.x = Math.PI / 2; //X坐标
+    ring.rotation.y = -0.1 * (Math.PI / 2); //Y 坐标
     scene.add(ring);
     //创建卫星
-    const iconGeometry = new THREE.IcosahedronGeometry(16, 0);
-    const iconMaterial = new THREE.MeshToonMaterial({ color: 0xfffc00 });
+    const iconGeometry = new THREE.IcosahedronGeometry(16, 0); //形状
+    const iconMaterial = new THREE.MeshToonMaterial({ color: 0xfffc00 }); //材质
     const satellite = new THREE.Mesh(iconGeometry, iconMaterial);
     scene.add(satellite);
     //创建彗星
     const stars = new THREE.Group();
     for (let i = 0; i < 500; i++) {
       const geometry = new THREE.IcosahedronGeometry(Math.random() * 2, 0);
-      const material = new THREE.MeshToonMaterial({ color:  0xeeeeee });
+      const material = new THREE.MeshToonMaterial({ color: 0xeeeeee });
       const mesh = new THREE.Mesh(geometry, material);
       mesh.position.x = (Math.random() - 0.5) * 700;
       mesh.position.y = (Math.random() - 0.5) * 700;

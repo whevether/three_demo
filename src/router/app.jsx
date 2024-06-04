@@ -12,8 +12,10 @@ import LoadableComponent from './LoadableComponent';
 const Home = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/home'));
 const Demo1 = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/demo1'));
 const Demo2_1 = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/demo2_1'));
+const Demo2 = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/demo2'));
 const NotFound = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/nodeFound'));
 /* Routes 相当于 v4 v5中的switch路由 */
+/* eslint-disable react/jsx-pascal-case */
 const routes = [{
   path: "/",
   element: <RootLayout />,
@@ -28,6 +30,9 @@ const routes = [{
     },{
       path: 'demo2_1',
       element: <Demo2_1 />
+    },{
+      path: 'demo2',
+      element: <Demo2 />
     },{
     path: '*',
     element: <NotFound />
