@@ -20,6 +20,9 @@ const Home = () => {
     };
     const list = [];
     for (let i = 1; i < 15; i++) {
+        if(i === 2){
+            list.push('2_1');
+        }
         list.push(i);
     }
     return (<>

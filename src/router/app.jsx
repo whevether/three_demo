@@ -11,6 +11,7 @@ import LoadableComponent from './LoadableComponent';
 /* 页面 */
 const Home = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/home'));
 const Demo1 = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/demo1'));
+const Demo2_1 = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/demo2_1'));
 const NotFound = LoadableComponent(() => import(/* webpackPrefetch: true */'../components/nodeFound'));
 /* Routes 相当于 v4 v5中的switch路由 */
 const routes = [{
@@ -24,6 +25,9 @@ const routes = [{
     },{
       path: 'demo1',
       element: <Demo1 />
+    },{
+      path: 'demo2_1',
+      element: <Demo2_1 />
     },{
     path: '*',
     element: <NotFound />
