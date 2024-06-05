@@ -189,7 +189,7 @@ const Demo1 = () => {
     };
   }, []);
   return (
-    <div className="demo1-wrapper">
+    <div className="demo2-wrapper">
       {head()}
       <canvas ref={canvasRef} />
     </div>

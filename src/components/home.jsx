@@ -13,8 +13,8 @@ const Home = () => {
     const head = () => {
         return (
             <Helmet>
-                <title>主页</title>
-                <meta property="og:title" content="主页" />
+                <title>three.js学习示例</title>
+                <meta property="og:title" content="three.js学习示例" />
             </Helmet>
         );
     };
