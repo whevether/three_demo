@@ -25,10 +25,10 @@ const Demo3 = () => {
             <canvas ref={canvasRef} />
           </div>
           <div className="section second" >
-            <div className="section-content">
+            <div className="second-container">
               <ul>
                 {
-                  ['入门', '基础', '进阶'].map((item, index) => <li key={index}>{item}</li>)
+                  ['入门', '基础', '进阶'].map((item, index) => <li key={index} className="active">{item}</li>)
                 }
               </ul>
               <canvas ref={canvasRef1} />
