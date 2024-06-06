@@ -6,9 +6,9 @@ import { OrbitControls } from 'three/examples/jsm/Addons.js';
 // import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 // import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+let renderer, scene, camera;
 const Demo1 = () => {
   const canvasRef = useRef(null);
-  let renderer, scene, camera;
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import * as THREE from 'three';
+let renderer, scene, camera;
 const Demo1 = () => {
   const canvasRef = useRef(null);
-  let renderer, scene, camera, mesh;
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -41,7 +41,7 @@ const Demo1 = () => {
     //创建网格对象
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: '#2BA471' });
-    mesh = new THREE.Mesh(geometry, material);
+    const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
     window.addEventListener('resize', onResize);

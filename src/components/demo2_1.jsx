@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/Addons.js';
+let renderer, scene, camera;
 const Demo1 = () => {
   const canvasRef = useRef(null);
-  let renderer, scene, camera;
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
